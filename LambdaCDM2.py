@@ -39,7 +39,7 @@ pars = camb.CAMBparams()
 pars.set_cosmology(H0*littleh,ombh2=0.022, omch2=0.1198)
 pars.set_dark_energy() #re-set defaults
 pars.InitPower.set_params(As=2.114940245149156e-09,ns=0.9645)
-pars.set_matter_power(redshifts=[0.], kmax=0.4)
+pars.set_matter_power(redshifts=[0.], kmax=1)
 pars.NonLinear = model.NonLinear_none
 results = camb.get_results(pars)
 khs, z, pks = results.get_matter_power_spectrum(minkh=1e-4, maxkh=1, npoints = 300) 
